@@ -3607,9 +3607,6 @@ var LiveSocket = class {
     if (!browser_default.canPushState()) {
       return;
     }
-    if (history.scrollRestoration) {
-      history.scrollRestoration = "manual";
-    }
     let scrollTimer = null;
     window.addEventListener("scroll", (_e) => {
       clearTimeout(scrollTimer);
