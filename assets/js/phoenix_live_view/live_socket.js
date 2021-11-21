@@ -608,7 +608,7 @@ export default class LiveSocket {
       clearTimeout(scrollTimer)
       scrollTimer = setTimeout(() => {
         Browser.updateCurrentState(state => Object.assign(state, {scroll: window.scrollY}))
-      }, 100)
+      }, 0)
     })
     window.addEventListener("popstate", event => {
       if(!this.registerNewLocation(window.location)){ return }

@@ -3642,7 +3642,7 @@ within:
         clearTimeout(scrollTimer);
         scrollTimer = setTimeout(() => {
           browser_default.updateCurrentState((state) => Object.assign(state, { scroll: window.scrollY }));
-        }, 100);
+        }, 0);
       });
       window.addEventListener("popstate", (event) => {
         if (!this.registerNewLocation(window.location)) {
